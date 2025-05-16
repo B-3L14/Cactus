@@ -11,12 +11,13 @@ export default {
 
 <template>
     <NavBar />
-    <div class="w-full bg-white py-20">
-        <div class="max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center px-8">
-            <div class="w-full lg:w-1/2 space-y-6">
-                <h1 class="text-5xl font-black">CACTUS<br />ANALYTICS</h1>
+    <div class="w-full min-h-screen bg-white overflow-hidden py-8">
+        <div class="max-w-screen-xl mx-auto h-full flex flex-col lg:flex-row items-center px-8 justify-between">
+
+            <div class="w-full lg:w-1/2 flex flex-col justify-center space-y-6 text-center lg:text-left">
+                <h1 class="text-4xl md:text-5xl font-bold text-neutral-800">CACTUS<br />ANALYTICS</h1>
                 <h2 class="text-2xl font-light leading-snug">Maximizando resultados<br />através da inovação</h2>
-                <p class="text-gray-800 leading-relaxed">
+                <p class="text-lg md:text-xl text-neutral-600">
                     A Cactus é um projeto que almeja construir uma AI
                     robusta e versátil para atender as demandas
                     estratégicas do mercado. Desenvolver provisões,
@@ -24,20 +25,23 @@ export default {
                     sazonais, são alguns exemplos de métricas que serão
                     apontadas pela Cactus.
                 </p>
-                <button class="bg-black text-white font-medium px-6 py-2 rounded-lg hover:bg-neutral-800 transition">
-                    Saiba mais
-                </button>
+                <div>
+                    <button
+                        class="bg-black text-white font-medium px-6 py-2 rounded-lg hover:bg-neutral-800 transition w-full lg:w-auto">
+                        Saiba mais
+                    </button>
+                </div>
+
             </div>
+
+            <div class="w-full lg:w-1/2 flex items-center justify-center lg:pl-24">
+                <img src="../../assets/images/TELAS.png" alt="Dashboard" class="w-full h-auto object-contain" />
+            </div>
+
         </div>
 
-        <!-- Coluna da imagem -->
-        <div class="w-full lg:w-1/2 mt-12 lg:mt-0 flex justify-center">
-            <img src="../../assets/images/TELAS.png" alt="Gráfico de crescimento" class="w-full max-w-[600px] object-contain"/>
-        </div>
 
     </div>
-
-
 </template>
 
 <style>

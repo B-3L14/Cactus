@@ -5,11 +5,10 @@
   }
 
 </script>
-  
 
 <template>
-  <div>
-    <router-view />
+  <div class="h-full">
+    <router-view class="h-full" />
   </div>
 </template>
   
