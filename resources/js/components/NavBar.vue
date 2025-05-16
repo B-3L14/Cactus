@@ -11,7 +11,7 @@ export default {
             <div class="flex items-center justify-between h-full">
 
                 <div class="flex items-center">
-                    <img src="../../assets/images/cacto.svg" alt="Logo" class=" text-white h-10 w-10  ">
+                    <img src="../../assets/images/logo-cacto-branco.png" alt="Logo" class="w-10 h-10">
                 </div>
 
                 <div class="flex list-none items-center space-x-40 text-gray-300">
