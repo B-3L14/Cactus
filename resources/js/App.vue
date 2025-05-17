@@ -7,8 +7,8 @@
 </script>
 
 <template>
-  <div class="h-full">
-    <router-view class="h-full" />
+  <div class="h-full w-full">
+    <router-view class="h-full w-full" />
   </div>
 </template>
   
