@@ -15,17 +15,17 @@ export default {
         <div class=" mx-auto px-4 sm:px-6 lg:px-8 h-full">
             <div class="flex items-center justify-between h-full">
 
-                <div class="flex items-center">
-                    <img src="../../assets/images/logo-cacto-branco.png" alt="Logo" class="w-10 h-10">
-                </div>
+                <router-link to="/" class="flex items-center">
+                    <img src="../../assets/images/logo-cacto-branco.png" alt="Logo" class="w-10 h-10 cursor-pointer">
+                </router-link>
+
 
                 <div class="hidden lg:flex list-none items-center space-x-40 text-gray-300">
-                    <a href="#" class="hover:underline">Planos</a>
-                    <a href="#" class="hover:underline">Simulações</a>
-                    <a href="#" class="hover:underline">Produtos</a>
-                    <a href="#" class="hover:underline">Recursos</a>
-                    <a href="#" class="hover:underline">Nós</a>
-
+                    <router-link to="/plans" class="hover:underline">Planos</router-link>
+                    <router-link to="/simulations" class="hover:underline">Simulações</router-link>
+                    <router-link to="/products" class="hover:underline">Produtos</router-link>
+                    <router-link to="/resources" class="hover:underline">Recursos</router-link>
+                    <router-link to="/aboutus" class="hover:underline">Nós</router-link>
                 </div>
 
                 <!-- Botão desktop -->
@@ -54,11 +54,11 @@ export default {
                         &times;
                     </button>
 
-                    <a href="#" class="text-2xl font-semibold hover:underline" @click="isOpen = false">Planos</a>
-                    <a href="#" class="text-2xl font-semibold hover:underline" @click="isOpen = false">Simulações</a>
-                    <a href="#" class="text-2xl font-semibold hover:underline" @click="isOpen = false">Produtos</a>
-                    <a href="#" class="text-2xl font-semibold hover:underline" @click="isOpen = false">Recursos</a>
-                    <a href="#" class="text-2xl font-semibold hover:underline" @click="isOpen = false">Nós</a>
+                    <router-link to="/plans" class="hover:underline">Planos</router-link>
+                    <router-link to="/simulations" class="hover:underline">Simulações</router-link>
+                    <router-link to="/products" class="hover:underline">Produtos</router-link>
+                    <router-link to="/resources" class="hover:underline">Recursos</router-link>
+                    <router-link to="/aboutus" class="hover:underline">Nós</router-link>
 
                     <div class="pt-8 flex flex-col space-y-4 w-full px-4">
                         <button class="w-full text-center font-bold hover:bg-gray-700 text-white p-2 rounded-lg"
