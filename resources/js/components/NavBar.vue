@@ -30,7 +30,8 @@ export default {
 
                 <!-- Botão desktop -->
                 <div class="hidden lg:flex items-center space-x-4">
-                    <button class=" font-bold hover:bg-gray-400 text-white p-2 rounded-lg" type="submit">Entrar</button>
+                    <router-link to="/login"
+                        class="font-bold hover:bg-gray-400 text-white p-2 rounded-lg">Entrar</router-link>
                     <button class=" bg-slate-50 text-stone-800 p-2 rounded-lg" type="submit">Cadastre-se</button>
                 </div>
 
@@ -46,7 +47,7 @@ export default {
                 </div>
 
                 <!-- Nav Mobile -->
-                
+
                 <div v-if="isOpen"
                     class="fixed inset-0 bg-neutral-900 text-gray-100 z-50 flex flex-col items-center justify-center space-y-6 px-4 transition-all duration-300">
 
@@ -61,8 +62,9 @@ export default {
                     <router-link to="/aboutus" class="hover:underline">Nós</router-link>
 
                     <div class="pt-8 flex flex-col space-y-4 w-full px-4">
-                        <button class="w-full text-center font-bold hover:bg-gray-700 text-white p-2 rounded-lg"
-                            @click="isOpen = false">Entrar</button>
+                        <router-link to="/login" class="font-bold hover:bg-gray-400 text-white p-2 rounded-lg" @click="isOpen = false">
+                            Entrar
+                        </router-link>
                         <button class="w-full text-center bg-slate-50 text-stone-800 p-2 rounded-lg"
                             @click="isOpen = false">Cadastre-se</button>
                     </div>
