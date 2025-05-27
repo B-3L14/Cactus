@@ -32,7 +32,9 @@ export default {
                 <div class="hidden lg:flex items-center space-x-4">
                     <router-link to="/login"
                         class="font-bold hover:bg-gray-400 text-white p-2 rounded-lg">Entrar</router-link>
-                    <button class=" bg-slate-50 text-stone-800 p-2 rounded-lg" type="submit">Cadastre-se</button>
+                    <router-link to="/register"
+                        class="bg-slate-50 text-stone-800 p-2 rounded-lg">Cadastre-se</router-link>
+
                 </div>
 
                 <!-- Botão Mobile -->
@@ -62,11 +64,16 @@ export default {
                     <router-link to="/aboutus" class="hover:underline">Nós</router-link>
 
                     <div class="pt-8 flex flex-col space-y-4 w-full px-4">
-                        <router-link to="/login" class="font-bold hover:bg-gray-400 text-white p-2 rounded-lg" @click="isOpen = false">
+                        <router-link to="/login" class="font-bold hover:bg-gray-400 text-white p-2 rounded-lg"
+                            @click="isOpen = false">
                             Entrar
                         </router-link>
-                        <button class="w-full text-center bg-slate-50 text-stone-800 p-2 rounded-lg"
-                            @click="isOpen = false">Cadastre-se</button>
+
+                        <router-link to="/register" class="w-full text-center bg-slate-50 text-stone-800 p-2 rounded-lg"
+                            @click="isOpen = false">
+                            Cadastre-se
+                        </router-link>
+
                     </div>
                 </div>
 
