@@ -10,12 +10,12 @@ use App\Models\User;
 Route::post('/login', function (Request $request) {
     $request->validate([
         'email' => 'required|email',
-        'senha' => 'required',
+        'password' => 'required',
     ]);
 
     $user = User::where('email', $request->email)->first();
 
-    if (! $user || ! Hash::check($request->senha, $user->senha)) {
+    if (! $user || ! Hash::check($request->password, $user->password)) {
         return response()->json(['message' => 'Credenciais inválidas'], 401);
     }
 
@@ -50,9 +50,9 @@ Route::middleware('auth:sanctum')->post('/logout', function (Request $request) {
 
 Route::post('/register', function (Request $request) {
     $validator = Validator::make($request->all(), [
-        'nome' => 'required|string|max:255',
-        'email' => 'required|string|email|max:255|unique:usuarios,email',
-        'senha' => 'required|string|min:6',
+        'name' => 'required|string|max:255',
+        'email' => 'required|string|email|max:255|unique:users,email',
+        'password' => 'required|string|min:6|confirmed',
     ]);
 
     if ($validator->fails()) {
@@ -62,9 +62,9 @@ Route::post('/register', function (Request $request) {
     }
 
     $user = User::create([
-        'nome' => $request->nome,
+        'name' => $request->name,
         'email' => $request->email,
-        'senha' => Hash::make($request->senha),
+        'password' => Hash::make($request->password),
     ]);
 
     $token = $user->createToken('auth_token')->plainTextToken;
