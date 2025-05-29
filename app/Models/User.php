@@ -15,7 +15,7 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
     use HasApiTokens, Notifiable;
 
-    protected $table = 'usuarios'; // teste provisorio
+    protected $table = 'users';
 
     /**
      * The attributes that are mass assignable.
@@ -23,9 +23,9 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        'nome',
+        'name',
         'email',
-        'senha',
+        'password',
     ];
 
     /**
@@ -34,7 +34,7 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $hidden = [
-        'senha',
+        'password',
         'remember_token',
     ];
 
@@ -47,7 +47,7 @@ class User extends Authenticatable
     {
         return [
             'email_verified_at' => 'datetime',
-            'senha' => 'hashed',
+            'password' => 'hashed',
         ];
     }
 }
