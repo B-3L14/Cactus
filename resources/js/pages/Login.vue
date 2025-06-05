@@ -70,11 +70,13 @@ export default {
                     </button>
                 </form>
                 <hr class="my-6" />
-                <button
-                    class="w-full p-3 rounded-lg font-semibold bg-black text-white hover:bg-gray-900 transition"
-                >
+                <router-link 
+                    to="/register"
+                    class="block w-full p-3 rounded-lg font-semibold bg-black text-white hover:bg-gray-900 transition"
+                    @click="isOpen = false">
                     Cadastrar
-                </button>
+                </router-link>
+                
             </div>
         </div>
     </div>
