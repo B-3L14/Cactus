@@ -19,11 +19,8 @@ export default {
                     <img src="../../assets/images/logo-cacto-branco.png" alt="Logo" class="w-10 h-10 cursor-pointer">
                 </router-link>
 
-
                 <div class="hidden lg:flex list-none items-center space-x-40 text-gray-300">
                     <router-link to="/plans" class="hover:underline">Planos</router-link>
-                    <router-link to="/simulations" class="hover:underline">Simulações</router-link>
-                    <router-link to="/products" class="hover:underline">Produtos</router-link>
                     <router-link to="/resources" class="hover:underline">Recursos</router-link>
                     <router-link to="/aboutus" class="hover:underline">Nós</router-link>
                 </div>
@@ -58,8 +55,6 @@ export default {
                     </button>
 
                     <router-link to="/plans" class="hover:underline">Planos</router-link>
-                    <router-link to="/simulations" class="hover:underline">Simulações</router-link>
-                    <router-link to="/products" class="hover:underline">Produtos</router-link>
                     <router-link to="/resources" class="hover:underline">Recursos</router-link>
                     <router-link to="/aboutus" class="hover:underline">Nós</router-link>
 
